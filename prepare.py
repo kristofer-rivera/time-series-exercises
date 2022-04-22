@@ -65,6 +65,6 @@ def prepare_energy(energy):
     #Fill missing values
     energy.Wind.fillna(0, inplace = True)
     energy.Solar.fillna(0, inplace = True)
-    energy['Wind_Solar'].fillna(energy.Wind + energy.Solar, inplace = True)
+    energy['Wind+Solar'].fillna(energy.Wind + energy.Solar, inplace = True)
 
     return energy
